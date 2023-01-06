@@ -1,0 +1,77 @@
+aside {
+  width: 270px;
+  background-color: #151515;
+  padding: 20px;
+  grid-area: sidebar;
+  border-radius: 10px;
+}
+
+aside .sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+aside .sidebar-header .sidebar-header-username p {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+aside .sidebar-header img {
+  border-radius: 50%;
+  border: 5px solid #666;
+}
+
+aside .sidebar-header h4 {
+  font-size: 25px;
+}
+
+aside .sidebar-social {
+  padding-left: 13px;
+}
+
+aside .sidebar-social > * {
+  transform: scale(1.05);
+}
+
+aside .sidebar-social h4 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+aside .sidebar-social ul {
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside .sidebar-social ul li a {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  transition: .4s;
+}
+
+aside .sidebar-social ul li a svg {
+  fill: #aaa;
+  margin-right: 20px;
+}
+
+aside .sidebar-social ul li a:hover, aside .sidebar-social ul li a:hover svg{
+  color: whitesmoke;
+  fill: whitesmoke;
+}
+
+
+
+
+/* Responsive Breakpoint */
+/* == Tablet == */
+@media screen and (max-width: 1000px) {
+  aside {
+    display: none;
+  }
+}

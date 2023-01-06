@@ -1,0 +1,364 @@
+main {
+  grid-area: main;
+  background-color: #151515;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+main .jumbotron {
+  height: 250px;
+  background-image: url('media/bg1.jpg');
+  background-size: cover;
+  background-position: center -150px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 100px;
+  box-shadow: inset -20px -70px  100px rgba(0, 0, 0, 0.726);
+  border-radius: 0 0 10px 10px;
+}
+
+main .jumbotron h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+main .jumbotron p {
+  font-size: 30px;
+}
+
+main .jumbotron p:nth-child(3) {
+  display: none;
+  font-size: 20px;
+  animation: textScroll 1s ease infinite alternate-reverse;
+}
+
+main .jumbotron p:nth-child(3) svg {
+  animation: textScroll 1s ease infinite alternate-reverse;
+}
+
+
+/* == text scroll animation */
+@keyframes textScroll {
+  0% {
+    color: #666;
+    fill: #666;
+  }
+
+  100% {
+    color: whitesmoke;
+    fill: whitesmoke;
+  }
+}
+
+main .music, main .playlist {
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+main .music h3, main .playlist h3{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+main .music ul li {
+  margin-bottom: 30px;
+  list-style: decimal;
+  margin-left: 40px;
+}
+
+main .music ul li figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .music ul li figure figcaption {
+  font-size: 20px;
+}
+
+main .music ul li figure audio {
+  width: 50%;
+}
+
+main .playlist ul {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  column-gap: 30px;
+  justify-content: space-between;
+}
+
+main .playlist ul li .card {
+  width: 220px;
+  height: 300px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main .playlist ul li .card .card-header {
+  width: 180px;
+  height: 180px;
+  background-color: #666;
+  border-radius: 5px;
+}
+
+main .playlist ul li .card .card-about {
+  width: 180px;
+}
+
+main .playlist ul li .card .card-about h4 {
+  margin-bottom: 12px;
+}
+
+main .playlist ul li .card .card-about p {
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 160px; 
+  white-space: nowrap;
+}
+
+main footer {
+  padding: 20px;
+  background-color: #050505;
+  margin-top: 60px;
+  cursor: default;
+}
+
+main footer .social {
+  width: 100%;
+  display: none;
+  justify-content: space-evenly;
+  column-gap: 50px;
+  margin-bottom: 50px;
+}
+
+main footer .social .social-header {
+  width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main footer .social-header .social-header-username p {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+main footer .social .social-header img {
+  border-radius: 50%;
+  border: 5px solid #666;
+}
+
+main footer .social .social-header h4 {
+  font-size: 25px;
+}
+
+main footer .social .social-list {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main footer .social .social-list > * {
+  transform: scale(1.05);
+}
+
+main footer .social .social-list h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+main footer .social .social-list ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main footer .social .social-list ul li a svg {
+  fill: #aaa;
+}
+
+main footer .social .social-list ul li a:hover svg{
+  fill: whitesmoke;
+}
+
+main footer .footer-copyright {
+  color: #999;
+  text-align: center;
+}
+
+main footer .footer-copyright p {
+  margin-bottom: 25px;
+}
+
+
+
+
+/* Responsive Breakpoint */
+/* == Tablet == */
+@media screen and (max-width: 1000px) {
+  main {
+    border-radius: 0;
+  }
+  
+  main .jumbotron {
+    height: 100vh;
+    align-items: center;
+    padding: 0;
+    background-position: center;
+    position: relative;
+  }
+  
+  main .jumbotron h1 {
+    font-size: 12vw;
+  }
+  
+  main .jumbotron p {
+    font-size: 5vw;
+  }
+
+  main .jumbotron p:nth-child(3) {
+    display: flex;
+    height: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 35px;
+  }
+
+  main footer .social {
+    display: flex;
+  }
+}
+
+
+/* == Tablet #2 == */
+@media screen and (max-width: 768px) {
+  main .music ul li figure {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  main .music ul li figure figcaption {
+    margin-bottom: 20px;
+  }
+
+  main .music ul li figure audio {
+    width: 100%;
+  }
+}
+
+
+/* == Mobile Phone == */
+@media screen and (max-width: 576px) {
+  main .jumbotron h1 {
+    font-size: 15vw;
+  }
+  
+  main .jumbotron p {
+    font-size: 7vw;
+  }
+
+  main .music {
+    padding: 25px 10px;
+  }
+
+  main .music ul li {
+    margin-left: 30px;
+  }
+
+  main .playlist {
+    padding: 0;
+  }
+
+  main .playlist h3, main .playlist ul {
+    padding: 0 10px;
+    scroll-padding: 10px;
+  }
+
+  main .playlist ul li .card {
+    width: 200px;
+    height: 280px;
+  }
+
+  main .playlist ul li .card .card-header {
+    width: 160px;
+    height: 160px;
+  }
+  
+  main .playlist ul li .card .card-about {
+    width: 160px;
+  }
+
+  main footer .social {
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  main footer .social .social-header {
+    margin-bottom: 40px;
+  }
+
+  main footer .social .social-list  {
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+
+  main footer .social .social-list ul {
+    height: 200px;
+    flex-direction: column;
+  }
+
+  main footer .social .social-list ul li a {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    color: #aaa;
+  }
+
+  main footer .social .social-list ul li a:hover {
+    color: whitesmoke;
+  }
+
+  main footer .social .social-list ul li a svg {
+    margin-right: 20px;
+  }
+
+  main footer .social .social-list ul li a::after {
+    content: 'Instagram';
+  }
+  main footer .social .social-list ul li:nth-child(2) a::after {
+    content: 'Facebook';
+  }
+  main footer .social .social-list ul li:nth-child(3) a::after {
+    content: 'YouTube';
+  }
+  main footer .social .social-list ul li:nth-child(4) a::after {
+    content: 'Github';
+  }
+}
+
+
+/* == Mini Mobile Phone == */
+@media screen and (max-width: 320px) and (max-height: 568px) {
+  main .jumbotron p:nth-child(3) {
+    font-size: 14px;
+    bottom: 20px;
+  }
+
+  main .jumbotron p:nth-child(3) svg {
+    width: 25px;
+  }
+}
